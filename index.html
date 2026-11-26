@@ -5823,6 +5823,41 @@ margin-top:-70px;
 }
 }
 
+/* ===== internal links: beauty (greige) / append to the end of inside.css ===== */
+#beautypage .case_flex li{border-top-color:#a68b62;}
+#beautypage .case_title{color:#a68b62;}
+#beautypage .mc_related_cate{background-color:rgba(207,190,167,0.35);}
+#beautypage .mc_bt_ichiran{background-color:#a68b62;}
+#beautypage .mc_related_box .mc_related_title::before{color:#a68b62;}
+/* new-design (Bootstrap) pages: neutralize Bootstrap list/link defaults inside the added blocks */
+#beautypage .bil-wrap{font-family:"M PLUS 1p",sans-serif;}  /* LP body font is Noto Serif JP: match the classic pages */
+#beautypage .bil-wrap .case_flex{padding-left:0;margin-bottom:0;}
+#beautypage .bil-wrap .case_title{color:#a68b62 !important;font-size:17px !important;line-height:1.6 !important;font-weight:500 !important;font-family:"M PLUS 1p",sans-serif;}  /* lp_style sets h3 with !important: match the classic card title */
+@media (max-width:767px){#beautypage .bil-wrap .case_title{font-size:14px !important;}}
+#beautypage .bil-wrap h2.title_line{font-size:18px !important;line-height:1.6 !important;color:#a68b62 !important;letter-spacing:normal;font-weight:500;font-family:"M PLUS 1p",sans-serif;}  /* lp_style sets h2 with !important: match the classic .title_line */
+@media (max-width:767px){#beautypage .bil-wrap h2.title_line{font-size:14px !important;}}
+#beautypage .bil-wrap .mc_related_dl dd p{margin-bottom:0;}
+#beautypage .bil-wrap a{text-decoration:none;}
+#beautypage .bil-wrap .case_link_btn a,#beautypage .bil-wrap .mc_related_dl dd a{text-decoration:underline;}
+/* ===== internal links: product pages (new design in the general pink template) / append to the end of inside.css ===== */
+/* .bil-wrap exists only in the added blocks on new-design (Bootstrap) pages, so classic pages are not affected */
+#medical_inside .bil-wrap{font-family:"M PLUS 1p",sans-serif;}
+#medical_inside .bil-wrap .case_flex{padding-left:0;margin-bottom:0;}
+#medical_inside .bil-wrap .case_title{color:#E09696 !important;font-size:17px !important;line-height:1.6 !important;font-weight:500 !important;font-family:"M PLUS 1p",sans-serif;}
+@media (max-width:767px){#medical_inside .bil-wrap .case_title{font-size:14px !important;}}
+#medical_inside .bil-wrap h2.title_line{font-size:18px !important;line-height:1.6 !important;color:#E09696 !important;letter-spacing:normal;font-weight:500;font-family:"M PLUS 1p",sans-serif;}
+@media (max-width:767px){#medical_inside .bil-wrap h2.title_line{font-size:14px !important;}}
+#medical_inside .bil-wrap .mc_related_dl dd p{margin-bottom:0;}
+#medical_inside .bil-wrap a{text-decoration:none;}
+#medical_inside .bil-wrap .case_link_btn a,#medical_inside .bil-wrap .mc_related_dl dd a{text-decoration:underline;}
+/* internal links: WordPress auto-paragraph adds a <br> at the start of card / related-post links on pages with wpautop on -> hide it */
+.case_flex li > a > br:first-child,.mc_related_dl dd > a > br:first-child{display:none;}
+/* ===== internal links: underline in-text links on new-design (lp_style) pages (2026-11-26) ===== */
+/* lp_style.css a:link{text-decoration:none} cancels the theme's .case_link_btn underline */
+#beautypage .case_link_btn a:link,#beautypage .case_link_btn a:visited,#medical_inside .case_link_btn a:link,#medical_inside .case_link_btn a:visited{text-decoration:underline;}
+/* plain in-text links in beauty new-design body copy (.font-go paragraphs / price table cells); class-less links only, so buttons are not affected */
+#beautypage .font-go p > a:not([class]):link,#beautypage .font-go p > a:not([class]):visited,#beautypage .table-price td > a:not([class]):link,#beautypage .table-price td > a:not([class]):visited{text-decoration:underline;}
+
 </style>
 <style>/* inlined: https://ebinahifu.com/wp-content/themes/ebinahifu_theme2024/css/common.css */
 
@@ -8215,11 +8250,11 @@ form#mail_form input[type="button"] {
 <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Sawarabi+Mincho&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://ebinahifu.com/wp-content/themes/ebinahifu_theme2024/js/iscroll.js"></script>
@@ -8288,13 +8323,13 @@ $(document).ready(function() {
 <script src="https://ebinahifu.com/wp-content/themes/ebinahifu_theme2024/js/jquery.datetimepicker.js"></script>
 <link rel="shortcut icon" href="https://ebinahifu.com/wp-content/themes/ebinahifu_theme2024/favicon_b.ico" type="image/x-icon" />
 
-		<!-- All in One SEO Pro 5.0.5.1 - aioseo.com -->
+		<!-- All in One SEO Pro 5.0.6.1 - aioseo.com -->
 		<title>海老名のボトックス注射｜エラ・口角・表情じわの料金｜海老名皮フ科クリニック</title>
 	<meta name="description" content="海老名駅から徒歩5分の海老名皮フ科クリニック。エラ・口角・額・眉間・目尻などのボトックス注射と、脇汗の治療に対応しています。製剤別・部位別の施術料金、効果が現れる時期、主な副作用、美容カウンセリングの予約方法をご案内します。" />
 	<link rel="canonical" href="https://ebinahifu.com/beauty/botox/" />
-		<meta name="generator" content="All in One SEO Pro (AIOSEO) 5.0.5.1" />
+		<meta name="generator" content="All in One SEO Pro (AIOSEO) 5.0.6.1" />
 		<script type="application/ld+json" class="aioseo-schema">
-			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/#listItem","position":1,"name":"\u5bb6","item":"https:\/\/ebinahifu.com\/","nextItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/#listItem","name":"\u6d77\u8001\u540d\u306e\u7f8e\u5bb9\u76ae\u819a\u79d1\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u7f8e\u808c\u30bb\u30f3\u30bf\u30fc"}},{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/#listItem","position":2,"name":"\u6d77\u8001\u540d\u306e\u7f8e\u5bb9\u76ae\u819a\u79d1\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u7f8e\u808c\u30bb\u30f3\u30bf\u30fc","item":"https:\/\/ebinahifu.com\/beauty\/","nextItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#listItem","name":"\u6d77\u8001\u540d\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1 \u7f8e\u808c\u30bb\u30f3\u30bf\u30fc"},"previousItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/#listItem","name":"\u5bb6"}},{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#listItem","position":3,"name":"\u6d77\u8001\u540d\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1 \u7f8e\u808c\u30bb\u30f3\u30bf\u30fc","previousItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/#listItem","name":"\u6d77\u8001\u540d\u306e\u7f8e\u5bb9\u76ae\u819a\u79d1\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u7f8e\u808c\u30bb\u30f3\u30bf\u30fc"}}]},{"@type":"Organization","@id":"https:\/\/ebinahifu.com\/#organization","name":"\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u30af\u30ea\u30cb\u30c3\u30af","description":"\u76ae\u819a\u79d1\u30fb\u5c0f\u5150\u76ae\u819a\u79d1\u30fb\u7f8e\u5bb9\u76ae\u819a\u79d1\u30fb\u30a2\u30ec\u30eb\u30ae\u30fc\u79d1","url":"https:\/\/ebinahifu.com\/"},{"@type":"WebPage","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#webpage","url":"https:\/\/ebinahifu.com\/beauty\/botox\/","name":"\u6d77\u8001\u540d\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1 \u7f8e\u808c\u30bb\u30f3\u30bf\u30fc","description":"\u6d77\u8001\u540d\u99c5\u5f92\u6b695\u5206\u3001\u571f\u66dc\u30821\u65e5\u8a3a\u7642\u3002\u76ae\u819a\u79d1\u5c02\u9580\u533b\u306b\u3088\u308b\u7709\u9593\u30fb\u984d\u30fb\u76ee\u5c3b\u306e\u30b7\u30ef\u3001\u30a8\u30e9\u3001\u591a\u6c57\u75c7\u306a\u3069\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u3002\u8907\u6570\u90e8\u4f4d\u306b\u65bd\u8853\u3067\u304d\u308b\u6253\u3061\u653e\u984c\u30d7\u30e9\u30f3\u3082\u3054\u7528\u610f\u3057\u3066\u3044\u307e\u3059","inLanguage":"ja","isPartOf":{"@id":"https:\/\/ebinahifu.com\/#website"},"breadcrumb":{"@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#breadcrumblist"},"datePublished":"2026-08-31T14:52:09+09:00","dateModified":"2026-11-19T13:56:22+09:00"},{"@type":"WebSite","@id":"https:\/\/ebinahifu.com\/#website","url":"https:\/\/ebinahifu.com\/","name":"\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u30af\u30ea\u30cb\u30c3\u30af","description":"\u76ae\u819a\u79d1\u30fb\u5c0f\u5150\u76ae\u819a\u79d1\u30fb\u7f8e\u5bb9\u76ae\u819a\u79d1\u30fb\u30a2\u30ec\u30eb\u30ae\u30fc\u79d1","inLanguage":"ja","publisher":{"@id":"https:\/\/ebinahifu.com\/#organization"}}]}
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/#listItem","position":1,"name":"\u5bb6","item":"https:\/\/ebinahifu.com\/","nextItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/#listItem","name":"\u6d77\u8001\u540d\u306e\u7f8e\u5bb9\u76ae\u819a\u79d1\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u7f8e\u808c\u30bb\u30f3\u30bf\u30fc"}},{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/#listItem","position":2,"name":"\u6d77\u8001\u540d\u306e\u7f8e\u5bb9\u76ae\u819a\u79d1\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u7f8e\u808c\u30bb\u30f3\u30bf\u30fc","item":"https:\/\/ebinahifu.com\/beauty\/","nextItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#listItem","name":"\u6d77\u8001\u540d\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1 \u7f8e\u808c\u30bb\u30f3\u30bf\u30fc"},"previousItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/#listItem","name":"\u5bb6"}},{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#listItem","position":3,"name":"\u6d77\u8001\u540d\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1 \u7f8e\u808c\u30bb\u30f3\u30bf\u30fc","previousItem":{"@type":"ListItem","@id":"https:\/\/ebinahifu.com\/beauty\/#listItem","name":"\u6d77\u8001\u540d\u306e\u7f8e\u5bb9\u76ae\u819a\u79d1\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u7f8e\u808c\u30bb\u30f3\u30bf\u30fc"}}]},{"@type":"Organization","@id":"https:\/\/ebinahifu.com\/#organization","name":"\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u30af\u30ea\u30cb\u30c3\u30af","description":"\u76ae\u819a\u79d1\u30fb\u5c0f\u5150\u76ae\u819a\u79d1\u30fb\u7f8e\u5bb9\u76ae\u819a\u79d1\u30fb\u30a2\u30ec\u30eb\u30ae\u30fc\u79d1","url":"https:\/\/ebinahifu.com\/"},{"@type":"WebPage","@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#webpage","url":"https:\/\/ebinahifu.com\/beauty\/botox\/","name":"\u6d77\u8001\u540d\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u306a\u3089\u6d77\u8001\u540d\u76ae\u30d5\u79d1 \u7f8e\u808c\u30bb\u30f3\u30bf\u30fc","description":"\u6d77\u8001\u540d\u99c5\u5f92\u6b695\u5206\u3001\u571f\u66dc\u30821\u65e5\u8a3a\u7642\u3002\u76ae\u819a\u79d1\u5c02\u9580\u533b\u306b\u3088\u308b\u7709\u9593\u30fb\u984d\u30fb\u76ee\u5c3b\u306e\u30b7\u30ef\u3001\u30a8\u30e9\u3001\u591a\u6c57\u75c7\u306a\u3069\u306e\u30dc\u30c8\u30c3\u30af\u30b9\u6ce8\u5c04\u3002\u8907\u6570\u90e8\u4f4d\u306b\u65bd\u8853\u3067\u304d\u308b\u6253\u3061\u653e\u984c\u30d7\u30e9\u30f3\u3082\u3054\u7528\u610f\u3057\u3066\u3044\u307e\u3059","inLanguage":"ja","isPartOf":{"@id":"https:\/\/ebinahifu.com\/#website"},"breadcrumb":{"@id":"https:\/\/ebinahifu.com\/beauty\/botox\/#breadcrumblist"},"datePublished":"2026-08-31T14:52:09+09:00","dateModified":"2026-11-26T10:49:56+09:00"},{"@type":"WebSite","@id":"https:\/\/ebinahifu.com\/#website","url":"https:\/\/ebinahifu.com\/","name":"\u6d77\u8001\u540d\u76ae\u30d5\u79d1\u30af\u30ea\u30cb\u30c3\u30af","description":"\u76ae\u819a\u79d1\u30fb\u5c0f\u5150\u76ae\u819a\u79d1\u30fb\u7f8e\u5bb9\u76ae\u819a\u79d1\u30fb\u30a2\u30ec\u30eb\u30ae\u30fc\u79d1","inLanguage":"ja","publisher":{"@id":"https:\/\/ebinahifu.com\/#organization"}}]}
 		</script>
 		<!-- All in One SEO Pro -->
 
@@ -11916,7 +11951,7 @@ $('.drawer_nav li.bt_link_access a').click(function () {
 <div class="col-12 col-md-6 order-2 order-md-1">
 <div class="left-content">
 <div class="mb-4 fs-text me-xl-5 mx-3 font-go">
-<p>気になるシワ・エラ・多汗症に。最短10分、ダウンタイムほぼなしで若々しい印象へ。ボトックス注射は、あなたの笑顔をもっと自然にする施術です。</p>
+<p>気になる<b class="case_link_btn case_link_btn_b"><a href="https://ebinahifu.com/beauty/wrinkles/">シワ</a></b>・エラ・多汗症に。最短10分、ダウンタイムほぼなしで若々しい印象へ。ボトックス注射は、あなたの笑顔をもっと自然にする施術です。</p>
 <p>当院の院長はこれまで<span class="botox-label">1,000例以上のボトックス施術を経験</span>（対象期間：2011年11月〜2025年11月）。確かな技術と豊富な実績で、安心して施術をお受けいただけます。</p>
 <p>※当院のボトックス注射は、自由診療（保険適用外）です。</p>
 </div>
@@ -12811,7 +12846,7 @@ $('.drawer_nav li.bt_link_access a').click(function () {
 <div class="k-name"><p>小谷 和弘</p></div>
 <div class="k-clinic font-go fs-pc"><p><a href="https://www.ebinahifu.com/beauty/hello/">海老名皮フ科クリニック 理事長・院長</a></p></div>
 <div class="row justify-content-center py-3 font-go">
-<div class="col-12 col-md-4 fs-pc kanshu-cli"><p>日本皮膚科学会 皮膚科専門医</p></div>
+<div class="col-12 fs-pc kanshu-cli"><p>日本専門医機構認定皮膚科専門医<br class="only_smt">（旧：日本皮膚科学会認定皮膚科専門医）</p></div>
 <div class="col-12 col-md-4 fs-pc kanshu-cli"><p>厚生労働省指定 麻酔科標榜医</p></div>
 <div class="col-12 col-md-4 fs-pc kanshu-cli"><p>日本内科学会 認定内科医</p></div>
 </div>
@@ -12822,6 +12857,50 @@ $('.drawer_nav li.bt_link_access a').click(function () {
 </section>
 
 </div>
+
+<div class="inside_outside_top bil-wrap">
+<div class="contents">
+<div class="mc_related_box mgn_top30">
+<span class="mc_related_title">関連記事</span>
+<p class="mc_bt_ichiran"><a href="https://ebinahifu.com/medical_column/">一覧を見る</a></p>
+<dl class="mc_related_dl">
+<dt><a href="https://ebinahifu.com/medical_column/%e9%9f%93%e5%9b%bd%e8%a3%bd%e3%83%9c%e3%83%88%e3%83%83%e3%82%af%e3%82%b9%e3%81%a8%e3%82%a2%e3%83%a9%e3%82%ac%e3%83%b3%e7%a4%be%e8%a3%bd%e3%81%af%e4%bd%95%e3%81%8c%e9%81%95%e3%81%86%ef%bc%9ffda/">2026/10/29</a></dt>
+<dd><a href="https://ebinahifu.com/medical_column/%e9%9f%93%e5%9b%bd%e8%a3%bd%e3%83%9c%e3%83%88%e3%83%83%e3%82%af%e3%82%b9%e3%81%a8%e3%82%a2%e3%83%a9%e3%82%ac%e3%83%b3%e7%a4%be%e8%a3%bd%e3%81%af%e4%bd%95%e3%81%8c%e9%81%95%e3%81%86%ef%bc%9ffda/"><p><span class="mc_related_cate">しわ・たるみ</span></p><p>韓国製ボトックスとアラガン社製は何が違う？FDA承認の「ナボタ」「ボツラックス」を当院が選ぶ理由</p></a></dd>
+<dt><a href="https://ebinahifu.com/medical_column/%e3%81%a9%e3%81%86%e3%81%97%e3%81%a6%e5%bd%93%e9%99%a2%e3%81%ae%e3%83%9c%e3%83%88%e3%83%83%e3%82%af%e3%82%b9%e6%b3%a8%e5%b0%84%e3%81%af%e7%97%9b%e3%81%bf%e3%81%8c%e5%b0%91%e3%81%aa%e3%81%84%e3%81%ae/">2026/10/03</a></dt>
+<dd><a href="https://ebinahifu.com/medical_column/%e3%81%a9%e3%81%86%e3%81%97%e3%81%a6%e5%bd%93%e9%99%a2%e3%81%ae%e3%83%9c%e3%83%88%e3%83%83%e3%82%af%e3%82%b9%e6%b3%a8%e5%b0%84%e3%81%af%e7%97%9b%e3%81%bf%e3%81%8c%e5%b0%91%e3%81%aa%e3%81%84%e3%81%ae/"><p><span class="mc_related_cate">しわ・たるみ</span></p><p>どうして当院のボトックス注射は痛みが少ないのか？皮膚科専門医が解説</p></a></dd>
+<dt><a href="https://ebinahifu.com/medical_column/%e3%83%80%e3%82%a6%e3%83%b3%e3%82%bf%e3%82%a4%e3%83%a0%e3%81%ae%e7%84%a1%e3%81%84%e6%96%b0%e3%81%97%e3%81%84%e7%be%8e%e5%ae%b9%e6%b2%bb%e7%99%82%e3%81%a8%e3%81%af%ef%bc%9f-%e7%9a%ae%e8%86%9a%e7%a7%91/">2026/09/26</a></dt>
+<dd><a href="https://ebinahifu.com/medical_column/%e3%83%80%e3%82%a6%e3%83%b3%e3%82%bf%e3%82%a4%e3%83%a0%e3%81%ae%e7%84%a1%e3%81%84%e6%96%b0%e3%81%97%e3%81%84%e7%be%8e%e5%ae%b9%e6%b2%bb%e7%99%82%e3%81%a8%e3%81%af%ef%bc%9f-%e7%9a%ae%e8%86%9a%e7%a7%91/"><p><span class="mc_related_cate">しわ・たるみ</span></p><p>ダウンタイムの無い新しい美容治療とは？ 皮膚科専門医が解説！</p></a></dd>
+<dt><a href="https://ebinahifu.com/medical_column/%e8%8b%a5%e3%81%95%e3%82%92%e4%bf%9d%e3%81%a4%e3%81%ae%e3%81%ab%e6%9c%80%e9%81%a9%ef%bc%81%e3%81%8a%e3%81%99%e3%81%99%e3%82%81%e6%b2%bb%e7%99%82%e3%83%a1%e3%83%8b%e3%83%a5%e3%83%bc%ef%bc%93%e9%81%b8/">2026/07/19</a></dt>
+<dd><a href="https://ebinahifu.com/medical_column/%e8%8b%a5%e3%81%95%e3%82%92%e4%bf%9d%e3%81%a4%e3%81%ae%e3%81%ab%e6%9c%80%e9%81%a9%ef%bc%81%e3%81%8a%e3%81%99%e3%81%99%e3%82%81%e6%b2%bb%e7%99%82%e3%83%a1%e3%83%8b%e3%83%a5%e3%83%bc%ef%bc%93%e9%81%b8/"><p><span class="mc_related_cate">しわ・たるみ</span></p><p>若さを保つのに最適！院長おすすめの治療メニュー３選のご紹介</p></a></dd>
+</dl>
+<!--end div#mc_related_box--></div>
+<!--end div#contents--></div>
+<!--end div#inside_outside--></div>
+
+<div class="inside_outside_b_short bil-wrap">
+<div class="contents">
+<h2 class="title_line mgn_btm20">あわせて読みたい</h2>
+<ul class="case_flex">
+<li><a href="https://ebinahifu.com/beauty/waki-botox/"><h3 class="case_title">わきボトックス</h3>
+<p class="case_img"><img decoding="async" src="https://ebinahifu.com/wp-content/uploads/2026/11/thumb_waki_botox.webp" alt="わきボトックス"/></p>
+<p class="case_txt">わき汗（多汗症）の悩みに用いるボトックス注射です。</p></a></li>
+<li><a href="https://ebinahifu.com/beauty/wrinkles/"><h3 class="case_title">しわ・たるみ</h3>
+<p class="case_img"><img decoding="async" src="https://ebinahifu.com/wp-content/uploads/2026/11/thumb_wrinkles.webp" alt="しわ・たるみ"/></p>
+<p class="case_txt">年齢とともに気になる、しわ・たるみの治療法をご紹介します。</p></a></li>
+<li><a href="https://ebinahifu.com/beauty/hifu/"><h3 class="case_title">ハイフ（HIFU）</h3>
+<p class="case_img"><img decoding="async" src="https://ebinahifu.com/wp-content/uploads/2026/11/thumb_hifu.webp" alt="ハイフ（HIFU）"/></p>
+<p class="case_txt">超音波を用いた、たるみ・引き締めの施術です。</p></a></li>
+<li><a href="https://ebinahifu.com/beauty/genesis/"><h3 class="case_title">ジェネシス</h3>
+<p class="case_img"><img decoding="async" src="https://ebinahifu.com/wp-content/uploads/2026/11/thumb_genesis.webp" alt="ジェネシス"/></p>
+<p class="case_txt">レーザーで赤み・毛穴・ハリなどにアプローチする施術です。</p></a></li>
+<li><a href="https://ebinahifu.com/beauty/placenta/"><h3 class="case_title">プラセンタ注射</h3>
+<p class="case_img"><img decoding="async" src="https://ebinahifu.com/wp-content/uploads/2026/11/thumb_placenta.webp" alt="プラセンタ注射"/></p>
+<p class="case_txt">プラセンタ（胎盤由来）エキスを用いた注射メニューです。</p></a></li>
+</ul>
+<p class="case_link_btn case_link_btn_b mgn_btm30"><a href="https://ebinahifu.com/beauty/">美容皮膚科のメニュー一覧を見る<i class="fas fa-angle-right"></i></a></p>
+<!--end div#contents--></div>
+<!--end div#inside_outside--></div>
+
 <!-- ------------------------------- con6 kokokara------------------------------- -->
 <div id="link_access"></div>
 <div class="con6_outside" id="">
