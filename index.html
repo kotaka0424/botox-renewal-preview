@@ -11157,7 +11157,8 @@ ul.footer_sitemap_flex ul {
   .botox-page .botox-part-body { margin-top:.8rem; }
   .botox-page .botox-case { padding:1.8rem 2rem 1.6rem; }
   .botox-page .botox-case-title { font-size:21px !important; }
-  .botox-page .botox-case-photos { gap:18px; }
+  /* PCは写真を縦横3/4に抑えて中央寄せ（スマホは全幅のまま） */
+  .botox-page .botox-case-photos { gap:18px; max-width:75%; margin-left:auto; margin-right:auto; }
   .botox-page .botox-case-info { display:grid; grid-template-columns:11em 1fr; font-size:15px; }
   .botox-page .botox-case-info dt { padding:.7em 1em; border-bottom:1px solid #E3DCC9; }
   .botox-page .botox-case-info dd { padding:.7em 1em; }
